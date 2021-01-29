@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "player_name": "A Ashish Reddy",
+    "DOB": "02/24/1991",
+    "Batting_Hand": "Right_Hand",
+    "Bowling_Skill": "Right-arm medium",
+    "Country": "India"
+  },
+  {
+    "id": 2,
+    "player_name": "A Chandila",
+    "DOB": "12/05/1983",
+    "Batting_Hand": "Right_Hand",
+    "Bowling_Skill": "Right-arm offbreak",
+    "Country": "India"
+  },
+  {
+    "id": 3,
+    "player_name": "A Chopra",
+    "DOB": "09/19/1977",
+    "Batting_Hand": "Right_Hand",
+    "Bowling_Skill": "Right-arm offbreak",
+    "Country": "India"
+  },
+  {
+    "id": 4,
+    "player_name": "A Choudhary",
+    "DOB": "",
+    "Batting_Hand": "Right_Hand",
+    "Bowling_Skill": "Left-arm fast-medium",
+    "Country": "India"
+  },
+  {
+    "id": 5,
+    "player_name": "A Dananjaya",
+    "DOB": "",
+    "Batting_Hand": "Right_Hand",
+    "Bowling_Skill": "Right-arm offbreak",
+    "Country": "India"
+  },
+  {
+    "id": 6,
+    "player_name": "A Flintoff",
+    "DOB": "12/06/1977",
+    "Batting_Hand": "Right_Hand",
+    "Bowling_Skill": "Right-arm fast-medium",
+    "Country": "England"
+  }
+]

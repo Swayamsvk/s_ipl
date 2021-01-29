@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
 import SearchIcon from "@material-ui/icons/Search";
-import Button from "@material-ui/core/Button";
+import Players from "./Extras/players.json";
+import Show from "./Show";
 
 const useStyles = makeStyles((theme) => ({
   margin: {
@@ -16,6 +17,35 @@ const useStyles = makeStyles((theme) => ({
 
 const Main = () => {
   const classes = useStyles();
+  const [data, setData] = useState([]);
+  const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    setData(Players);
+  }, []);
+
+  const dataList = () => {
+    return data
+      .filter((val) => {
+        if (search == "") {
+          return val;
+        } else if (
+          val.player_name.toLowerCase().includes(search.toLocaleLowerCase()) ||
+          val.DOB.toLowerCase().includes(search.toLocaleLowerCase()) ||
+          val.Bowling_Skill.toLowerCase().includes(
+            search.toLocaleLowerCase()
+          ) ||
+          val.Country.toLowerCase().includes(search.toLocaleLowerCase())
+        ) {
+          return val;
+        }
+      })
+      .map((currentdata) => {
+        return <Show data={currentdata} key={currentdata.id} />;
+      });
+  };
+
+  //create multiple shows for different attributes
 
   return (
     <div>
@@ -29,13 +59,12 @@ const Main = () => {
               id="input-with-icon-grid"
               label="Search"
               color="primary"
+              onChange={(e) => setSearch(e.target.value)}
             />
           </Grid>
-          <Button variant="outlined" color="primary">
-            Search
-          </Button>
         </Grid>
       </div>
+      <div>{dataList()}</div>
     </div>
   );
 };
