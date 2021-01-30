@@ -1,26 +1,50 @@
 [
   {
     "id": 1,
-    "team_name": "Pune Warriors"
+    "team_name": "Rising Pune Supergiant",
+    "home_wins": "5",
+    "away_wins": "5",
+    "home_matches": "8",
+    "away_matches": "8"
   },
   {
     "id": 2,
-    "team_name": "Kolkata Knight Riders"
+    "team_name": "Mumbai Indians",
+    "home_wins": "58",
+    "away_wins": "51",
+    "home_matches": "101",
+    "away_matches": "86"
   },
   {
     "id": 3,
-    "team_name": "Rajasthan Royals"
+    "team_name": "Chennai Super Kings",
+    "home_wins": "51",
+    "away_wins": "49",
+    "home_matches": "89",
+    "away_matches": "75"
   },
   {
     "id": 4,
-    "team_name": "Kochi Tuskers Kerala"
+    "team_name": "Delhi Capitals",
+    "home_wins": "3",
+    "away_wins": "7",
+    "home_matches": "6",
+    "away_matches": "10"
   },
   {
     "id": 5,
-    "team_name": "Gujarat Lions"
+    "team_name": "Sunrisers Hyderabad",
+    "home_wins": "30",
+    "away_wins": "28",
+    "home_matches": "63",
+    "away_matches": "45"
   },
   {
     "id": 6,
-    "team_name": "Chennai Super Kings"
+    "team_name": "Rajasthan Royals",
+    "home_wins": "29",
+    "away_wins": "28",
+    "home_matches": "67",
+    "away_matches": "80"
   }
 ]

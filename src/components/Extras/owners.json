@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "owner": "Preity Zinta",
+    "team_name": "Kings XI Punjab"
+  },
+  {
+    "id": 2,
+    "owner": "Reliance Industries",
+    "team_name": "Mumbai Indians"
+  },
+  {
+    "id": 3,
+    "owner": "Chennai Super Kings Cricket Limited",
+    "team_name": "Chennai Super Kings"
+  },
+  {
+    "id": 4,
+    "owner": "GMR Group and JSW Group",
+    "team_name": "Delhi Capitals"
+  },
+  {
+    "id": 5,
+    "owner": "Red Chillies Entertainment and Mehta Group",
+    "team_name": "Kolkata Knight Riders"
+  },
+  {
+    "id": 6,
+    "owner": "Sun TV Network",
+    "team_name": "Sunrisers Hyderabad"
+  }
+]

@@ -5,8 +5,12 @@ import Grid from "@material-ui/core/Grid";
 import SearchIcon from "@material-ui/icons/Search";
 import Players from "./Extras/players.json";
 import Teams from "./Extras/teams.json";
+import Owners from "./Extras/owners.json";
+import Venues from "./Extras/venues.json";
 import Showp from "./Showp";
 import Showt from "./Showt";
+import Showv from "./Showv";
+import Showo from "./Showo";
 
 const useStyles = makeStyles((theme) => ({
   margin: {
@@ -19,13 +23,17 @@ const useStyles = makeStyles((theme) => ({
 
 const Main = () => {
   const classes = useStyles();
+  const [search, setSearch] = useState("");
   const [player, setPlayer] = useState([]);
   const [teams, setTeams] = useState([]);
-  const [search, setSearch] = useState("");
+  const [owners, setOwners] = useState([]);
+  const [venues, setVenues] = useState([]);
 
   useEffect(() => {
     setPlayer(Players);
     setTeams(Teams);
+    setOwners(Owners);
+    setVenues(Venues);
   }, []);
 
   const playerList = () => {
@@ -65,7 +73,39 @@ const Main = () => {
       });
   };
 
-  //create multiple shows for different attributes
+  const ownerList = () => {
+    return owners
+      .filter((val) => {
+        if (search === "") {
+          return val;
+        } else if (
+          val.team_name.toLowerCase().includes(search.toLocaleLowerCase()) ||
+          val.owner.toLowerCase().includes(search.toLocaleLowerCase())
+        ) {
+          return val;
+        }
+      })
+      .map((currentowner) => {
+        return <Showo owner={currentowner} key={currentowner.id} />;
+      });
+  };
+
+  const venueList = () => {
+    return venues
+      .filter((val) => {
+        if (search === "") {
+          return val;
+        } else if (
+          val.city.toLowerCase().includes(search.toLocaleLowerCase()) ||
+          val.season.toLowerCase().includes(search.toLocaleLowerCase())
+        ) {
+          return val;
+        }
+      })
+      .map((currentvenue) => {
+        return <Showv venue={currentvenue} key={currentvenue.id} />;
+      });
+  };
 
   return (
     <div>
@@ -80,12 +120,15 @@ const Main = () => {
               label="Search"
               color="primary"
               onChange={(e) => setSearch(e.target.value)}
+              style={{ width: "50vh" }}
             />
           </Grid>
         </Grid>
       </div>
       <div>{playerList()}</div>
       <div>{teamList()}</div>
+      <div>{ownerList()}</div>
+      <div>{venueList()}</div>
     </div>
   );
 };

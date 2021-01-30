@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "city": "Kolkata",
+    "season": "IPL-2012"
+  },
+  {
+    "id": 2,
+    "city": "Mumbai",
+    "season": "IPL-2013"
+  },
+  {
+    "id": 3,
+    "city": "Hyderabad",
+    "season": "IPL-2017"
+  },
+  {
+    "id": 4,
+    "city": "Pune",
+    "season": "IPL-2017"
+  },
+  {
+    "id": 5,
+    "city": "Rajkot",
+    "season": "IPL-2017"
+  },
+  {
+    "id": 6,
+    "city": "Indore",
+    "season": "IPL-2017"
+  }
+]
