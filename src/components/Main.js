@@ -4,7 +4,9 @@ import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
 import SearchIcon from "@material-ui/icons/Search";
 import Players from "./Extras/players.json";
-import Show from "./Show";
+import Teams from "./Extras/teams.json";
+import Showp from "./Showp";
+import Showt from "./Showt";
 
 const useStyles = makeStyles((theme) => ({
   margin: {
@@ -17,17 +19,19 @@ const useStyles = makeStyles((theme) => ({
 
 const Main = () => {
   const classes = useStyles();
-  const [data, setData] = useState([]);
+  const [player, setPlayer] = useState([]);
+  const [teams, setTeams] = useState([]);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    setData(Players);
+    setPlayer(Players);
+    setTeams(Teams);
   }, []);
 
-  const dataList = () => {
-    return data
+  const playerList = () => {
+    return player
       .filter((val) => {
-        if (search == "") {
+        if (search === "") {
           return val;
         } else if (
           val.player_name.toLowerCase().includes(search.toLocaleLowerCase()) ||
@@ -40,8 +44,24 @@ const Main = () => {
           return val;
         }
       })
-      .map((currentdata) => {
-        return <Show data={currentdata} key={currentdata.id} />;
+      .map((currentplayer) => {
+        return <Showp player={currentplayer} key={currentplayer.id} />;
+      });
+  };
+
+  const teamList = () => {
+    return teams
+      .filter((val) => {
+        if (search === "") {
+          return val;
+        } else if (
+          val.team_name.toLowerCase().includes(search.toLocaleLowerCase())
+        ) {
+          return val;
+        }
+      })
+      .map((currentteam) => {
+        return <Showt team={currentteam} key={currentteam.id} />;
       });
   };
 
@@ -64,7 +84,8 @@ const Main = () => {
           </Grid>
         </Grid>
       </div>
-      <div>{dataList()}</div>
+      <div>{playerList()}</div>
+      <div>{teamList()}</div>
     </div>
   );
 };
