@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense, lazy } from "react";
+import "./Main.css";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
@@ -7,11 +8,14 @@ import Players from "../../Extras/players.json";
 import Teams from "../../Extras/teams.json";
 import Owners from "../../Extras/owners.json";
 import Venues from "../../Extras/venues.json";
-import Showp from "../Shows/Showp";
-import Showt from "../Shows/Showt";
-import Showv from "../Shows/Showv";
-import Showo from "../Shows/Showo";
-import "./Main.css";
+const Showp = lazy(() => import("../Shows/Showp"));
+const Showt = lazy(() => import("../Shows/Showt"));
+const Showv = lazy(() => import("../Shows/Showv"));
+const Showo = lazy(() => import("../Shows/Showo"));
+
+// import Showt from "../Shows/Showt";
+// import Showv from "../Shows/Showv";
+// import Showo from "../Shows/Showo";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -71,7 +75,12 @@ const Main = () => {
         }
       })
       .map((currentplayer) => {
-        return <Showp player={currentplayer} key={currentplayer.id} />;
+        return (
+          <Suspense fallback={<div />}>
+            {" "}
+            <Showp player={currentplayer} key={currentplayer.id} />
+          </Suspense>
+        );
       });
   };
 
@@ -87,7 +96,12 @@ const Main = () => {
         }
       })
       .map((currentteam) => {
-        return <Showt team={currentteam} key={currentteam.id} />;
+        return (
+          <Suspense fallback={<div />}>
+            {" "}
+            <Showt team={currentteam} key={currentteam.id} />
+          </Suspense>
+        );
       });
   };
 
@@ -104,7 +118,12 @@ const Main = () => {
         }
       })
       .map((currentowner) => {
-        return <Showo owner={currentowner} key={currentowner.id} />;
+        return (
+          <Suspense fallback={<div />}>
+            {" "}
+            <Showo owner={currentowner} key={currentowner.id} />
+          </Suspense>
+        );
       });
   };
 
@@ -121,7 +140,12 @@ const Main = () => {
         }
       })
       .map((currentvenue) => {
-        return <Showv venue={currentvenue} key={currentvenue.id} />;
+        return (
+          <Suspense fallback={<div />}>
+            {" "}
+            <Showv venue={currentvenue} key={currentvenue.id} />
+          </Suspense>
+        );
       });
   };
 
