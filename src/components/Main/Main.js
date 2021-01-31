@@ -3,18 +3,29 @@ import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
 import SearchIcon from "@material-ui/icons/Search";
-import Players from "./Extras/players.json";
-import Teams from "./Extras/teams.json";
-import Owners from "./Extras/owners.json";
-import Venues from "./Extras/venues.json";
-import Showp from "./Showp";
-import Showt from "./Showt";
-import Showv from "./Showv";
-import Showo from "./Showo";
+import Players from "../../Extras/players.json";
+import Teams from "../../Extras/teams.json";
+import Owners from "../../Extras/owners.json";
+import Venues from "../../Extras/venues.json";
+import Showp from "../Shows/Showp";
+import Showt from "../Shows/Showt";
+import Showv from "../Shows/Showv";
+import Showo from "../Shows/Showo";
+import "./Main.css";
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    minWidth: 275,
+  },
+  title: {
+    fontSize: 14,
+  },
+  pos: {
+    marginBottom: 12,
+  },
   margin: {
     margin: theme.spacing(1),
+    marginLeft: "30vh",
   },
   button: {
     margin: theme.spacing(1),
@@ -23,11 +34,16 @@ const useStyles = makeStyles((theme) => ({
 
 const Main = () => {
   const classes = useStyles();
+
+  //initate the states
+
   const [search, setSearch] = useState("");
   const [player, setPlayer] = useState([]);
   const [teams, setTeams] = useState([]);
   const [owners, setOwners] = useState([]);
   const [venues, setVenues] = useState([]);
+
+  //Load the required values
 
   useEffect(() => {
     setPlayer(Players);
@@ -35,6 +51,8 @@ const Main = () => {
     setOwners(Owners);
     setVenues(Venues);
   }, []);
+
+  //Methods to filter out the searched data and show it
 
   const playerList = () => {
     return player
@@ -108,7 +126,7 @@ const Main = () => {
   };
 
   return (
-    <div>
+    <div style={{ background: "antiquewhite" }} className="container">
       <div className={classes.margin}>
         <Grid container spacing={1} alignItems="flex-end">
           <Grid item>
@@ -120,15 +138,15 @@ const Main = () => {
               label="Search"
               color="primary"
               onChange={(e) => setSearch(e.target.value)}
-              style={{ width: "50vh" }}
+              className="elements"
             />
           </Grid>
         </Grid>
       </div>
-      <div>{playerList()}</div>
-      <div>{teamList()}</div>
-      <div>{ownerList()}</div>
-      <div>{venueList()}</div>
+      <div className="subelements">{playerList()}</div>
+      <div className="subelements">{teamList()}</div>
+      <div className="subelements">{ownerList()}</div>
+      <div className="subelements">{venueList()}</div>
     </div>
   );
 };

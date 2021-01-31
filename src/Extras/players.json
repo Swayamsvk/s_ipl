@@ -46,5 +46,53 @@
     "Batting_Hand": "Right_Hand",
     "Bowling_Skill": "Right-arm fast-medium",
     "Country": "England"
+  },
+  {
+    "id": 7,
+    "player_name": "A Hales",
+    "DOB": "",
+    "Batting_Hand": "Right_hand",
+    "Bowling_Skill": "",
+    "Country": ""
+  },
+  {
+    "id": 8,
+    "player_name": "A Joseph",
+    "DOB": "",
+    "Batting_Hand": "Right_Hand",
+    "Bowling_Skill": "Right-arm fast",
+    "Country": ""
+  },
+  {
+    "id": 9,
+    "player_name": "A Kumble",
+    "DOB": "10/17/1970",
+    "Batting_Hand": "Right_Hand",
+    "Bowling_Skill": "Legbreak googly",
+    "Country": "India"
+  },
+  {
+    "id": 10,
+    "player_name": "A Mishra",
+    "DOB": "11/24/1982",
+    "Batting_Hand": "Right_Hand",
+    "Bowling_Skill": "Legbreak",
+    "Country": "India"
+  },
+  {
+    "id": 11,
+    "player_name": "A Mithun",
+    "DOB": "10/25/1989",
+    "Batting_Hand": "Right_Hand",
+    "Bowling_Skill": "Right-arm medium",
+    "Country": "India"
+  },
+  {
+    "id": 12,
+    "player_name": "A Nel",
+    "DOB": "07/15/1977",
+    "Batting_Hand": "Right_Hand",
+    "Bowling_Skill": "Right-arm fast-medium",
+    "Country": "South Africa"
   }
 ]

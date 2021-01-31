@@ -1,0 +1,15 @@
+.App {
+  background-color: antiquewhite;
+  height: 100%;
+  width: 99%;
+  position: absolute;
+}
+
+@media (min-width: 768px) {
+  .App {
+    background-color: antiquewhite;
+    height: 100%;
+    width: 99%;
+    position: absolute;
+  }
+}

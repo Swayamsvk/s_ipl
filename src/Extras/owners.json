@@ -28,5 +28,10 @@
     "id": 6,
     "owner": "Sun TV Network",
     "team_name": "Sunrisers Hyderabad"
+  },
+  {
+    "id": 7,
+    "owner": "United Spirits",
+    "team_name": "Royal Challengers Bangalore"
   }
 ]

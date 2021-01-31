@@ -1,0 +1,17 @@
+.elements {
+  width: 70vh;
+}
+
+.subelements {
+  margin-left: 30vh;
+}
+
+@media (min-width: 768px) {
+  .elements {
+    width: 70vh;
+  }
+
+  .subelements {
+    margin-left: 30vh;
+  }
+}

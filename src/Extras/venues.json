@@ -28,5 +28,35 @@
     "id": 6,
     "city": "Indore",
     "season": "IPL-2017"
+  },
+  {
+    "id": 7,
+    "city": "",
+    "season": ""
+  },
+  {
+    "id": 8,
+    "city": "Bangalore",
+    "season": "IPL-2017"
+  },
+  {
+    "id": 9,
+    "city": "Hyderabad",
+    "season": "IPL-2017"
+  },
+  {
+    "id": 10,
+    "city": "Mumbai",
+    "season": "IPL-2017"
+  },
+  {
+    "id": 11,
+    "city": "Indore",
+    "season": "IPL-2017"
+  },
+  {
+    "id": 12,
+    "city": "Pune",
+    "season": "IPL-2017"
   }
 ]

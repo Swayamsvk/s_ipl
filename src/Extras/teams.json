@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "team_name": "Rising Pune Supergiant",
+    "home_wins": "5",
+    "away_wins": "5",
+    "home_matches": "8",
+    "away_matches": "8"
+  },
+  {
+    "id": 2,
+    "team_name": "Mumbai Indians",
+    "home_wins": "58",
+    "away_wins": "51",
+    "home_matches": "101",
+    "away_matches": "86"
+  },
+  {
+    "id": 3,
+    "team_name": "Chennai Super Kings",
+    "home_wins": "51",
+    "away_wins": "49",
+    "home_matches": "89",
+    "away_matches": "75"
+  },
+  {
+    "id": 4,
+    "team_name": "Delhi Capitals",
+    "home_wins": "3",
+    "away_wins": "7",
+    "home_matches": "6",
+    "away_matches": "10"
+  },
+  {
+    "id": 5,
+    "team_name": "Sunrisers Hyderabad",
+    "home_wins": "30",
+    "away_wins": "28",
+    "home_matches": "63",
+    "away_matches": "45"
+  },
+  {
+    "id": 6,
+    "team_name": "Rajasthan Royals",
+    "home_wins": "29",
+    "away_wins": "28",
+    "home_matches": "67",
+    "away_matches": "80"
+  },
+  {
+    "id": 7,
+    "team_name": "Deccan Chargers",
+    "home_wins": "18",
+    "away_wins": "11",
+    "home_matches": "43",
+    "away_matches": "32"
+  },
+  {
+    "id": 8,
+    "team_name": "Kings XI Punjab",
+    "home_wins": "38",
+    "away_wins": "44",
+    "home_matches": "91",
+    "away_matches": "85"
+  },
+  {
+    "id": 9,
+    "team_name": "Royal Challengers Bangalore",
+    "home_wins": "35",
+    "away_wins": "49",
+    "home_matches": "85",
+    "away_matches": "95"
+  },
+  {
+    "id": 10,
+    "team_name": "Kolkata Knight Riders",
+    "home_wins": "28",
+    "away_wins": "44",
+    "home_matches": "83",
+    "away_matches": "95"
+  },
+  {
+    "id": 11,
+    "team_name": "Delhi Daredevils",
+    "home_wins": "25",
+    "away_wins": "42",
+    "home_matches": "72",
+    "away_matches": "89"
+  },
+  {
+    "id": 12,
+    "team_name": "Pune Warriors",
+    "home_wins": "6",
+    "away_wins": "6",
+    "home_matches": "20",
+    "away_matches": "26"
+  }
+]
