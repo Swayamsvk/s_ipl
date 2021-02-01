@@ -8,14 +8,13 @@ import Players from "../../Extras/players.json";
 import Teams from "../../Extras/teams.json";
 import Owners from "../../Extras/owners.json";
 import Venues from "../../Extras/venues.json";
+
+//lazy setup
+
 const Showp = lazy(() => import("../Shows/Showp"));
 const Showt = lazy(() => import("../Shows/Showt"));
 const Showv = lazy(() => import("../Shows/Showv"));
 const Showo = lazy(() => import("../Shows/Showo"));
-
-// import Showt from "../Shows/Showt";
-// import Showv from "../Shows/Showv";
-// import Showo from "../Shows/Showo";
 
 const useStyles = makeStyles((theme) => ({
   root: {
